@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/style.css">
+    <title>Simulador | Coderhouse</title>
+</head>
+<body>
+    <h1>Simulador</h1>
+    <!--Seccion registro-->
+    <div>
+        <h2>Registro</h2>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        </div>
+        
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+        </div>
+        
+        <div>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="18">
+        </div>
+        
+        <div>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion">
+        </div>
+        
+        <div>
+            <label for="contrasenia">Contraseña:</label>
+            <input type="password" id="contrasenia">
+        </div>
+        
+        <button id="boton" onclick="registrarse()">Registrarse</button>
+    </div>
+    
+    <!--Seccion combo-->
+    <div id="seccionCombo" class="oculto">
+        <h2 class="">Bienvenido/a <span id="nombreBienvenida"></span>!</h2>
+
+        <h2 class="">Selecciona un combo:</h2>
+        <div class="">
+            <select id="combos" onchange="mostrarPrecio()">
+                <option value="52500">Combo 1 - $525.00</option>
+                <option value="48500">Combo 2 - $485.00</option>
+                <option value="48900">Combo 3 - $489.00</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="cantCombos">Cantidad de combos:</label>
+            <input type="number" id="cantCombos" min="1" value="1" onchange="mostrarPrecio()">
+        </div>
+
+        <button onclick="comprarCombo()" class="">Comprar</button>
+        <div id="costoTotalSinIVA"></div>
+        <div id="costoIVA"></div>
+        <div id="costoTotalConIVA">Total (IVA incluido):</div>
+    </div>
+
+    <script src="./Js/main.js"></script>
+</body>
+</html>
