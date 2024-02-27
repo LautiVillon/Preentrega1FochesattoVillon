@@ -6,45 +6,45 @@
     <link rel="stylesheet" href="./Css/style.css">
     <title>Simulador | Coderhouse</title>
 </head>
-<body>
+<body class="login">
     <h1>Simulador</h1>
     <!--Seccion registro-->
     <div>
-        <h2>Registro</h2>
-        <div>
+        <h2>Completa todos los campos</h2>
+        <div class="formularios">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre">
         </div>
         
-        <div>
+        <div class="formularios">
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido">
         </div>
         
-        <div>
+        <div class="formularios">
             <label for="edad">Edad:</label>
             <input type="number" id="edad" min="18">
         </div>
         
-        <div>
+        <div class="formularios">
             <label for="direccion">Dirección:</label>
             <input type="text" id="direccion">
         </div>
         
-        <div>
+        <div class="formularios">
             <label for="contrasenia">Contraseña:</label>
             <input type="password" id="contrasenia">
         </div>
         
-        <button id="boton" onclick="registrarse()">Registrarse</button>
+        <button class="boton1" id="boton" onclick="registrarse()">Registrarse</button>
     </div>
     
     <!--Seccion combo-->
     <div id="seccionCombo" class="oculto">
-        <h2 class="">Bienvenido/a <span id="nombreBienvenida"></span>!</h2>
+        <h2 class="h2combo">Bienvenido/a <span id="nombreBienvenida"></span>!</h2>
 
-        <h2 class="">Selecciona un combo:</h2>
-        <div class="">
+        <h2 class="h2combo">Selecciona un combo:</h2>
+        <div class="opcionesCombos">
             <select id="combos" onchange="mostrarPrecio()">
                 <option value="52500">Combo 1 - $525.00</option>
                 <option value="48500">Combo 2 - $485.00</option>
@@ -52,15 +52,15 @@
             </select>
         </div>
 
-        <div>
+        <div class="opcionesCombos">
             <label for="cantCombos">Cantidad de combos:</label>
             <input type="number" id="cantCombos" min="1" value="1" onchange="mostrarPrecio()">
         </div>
 
-        <button onclick="comprarCombo()" class="">Comprar</button>
-        <div id="costoTotalSinIVA"></div>
-        <div id="costoIVA"></div>
-        <div id="costoTotalConIVA">Total (IVA incluido):</div>
+        <button onclick="comprarCombo()" class="boton2">Comprar</button>
+        <div class="iva" id="costoTotalSinIVA"></div>
+        <div class="iva" id="costoIVA"></div>
+        <div class="iva" id="costoTotalConIVA">Total (IVA incluido):</div>
     </div>
 
     <script src="./Js/main.js"></script>

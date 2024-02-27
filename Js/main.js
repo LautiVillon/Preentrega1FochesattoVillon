@@ -29,5 +29,6 @@ function mostrarPrecio() {
 
 
 function comprarCombo() {
-    alert("Compra realizada con éxito.");
+    alert("Compra realizada con éxito. Estas por ser redirigido a los demas productos disponibles.");
+    window.location.href= './pages/carrito.html';
 }
