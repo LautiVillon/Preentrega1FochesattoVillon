@@ -3,6 +3,7 @@ const productos = [
   { id: 1, nombre: 'Pintura lavable', precio: 1500 },
   { id: 2, nombre: 'Pintura para exterior', precio: 1200 },
   { id: 3, nombre: 'Pintura para piscinas', precio: 1800 },
+  { id: 4, nombre: 'Pintura interior', precio: 2100 },
 ];
 
 // Función para inicializar la aplicación
