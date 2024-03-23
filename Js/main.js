@@ -29,6 +29,15 @@ function mostrarPrecio() {
 
 
 function comprarCombo() {
-    alert("Compra realizada con éxito. Estas por ser redirigido a los demas productos disponibles.");
-    window.location.href= 'Pages/carrito.html';
+    Swal.fire({
+        title: '¡Compra realizada con éxito!',
+        text: 'Estás por ser redirigido a los demás productos disponibles.',
+        icon: 'success',
+        confirmButtonColor: '#907761',
+        confirmButtonText: 'Ok'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'Pages/carrito.html';
+        }
+    });
 }

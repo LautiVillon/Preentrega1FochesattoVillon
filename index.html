@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Simulador | Coderhouse</title>
-</head>
-<body class="login">
-    <h1>Simulador | Coderhouse</h1>
-    <!--Seccion registro-->
-    <div>
+  </head>
+  <body class="login">
+    <div class="principal">
+      <h1>Simulador | Coderhouse</h1>
+      <!--Seccion registro-->
+      <div>
         <h2>Rellena los datos</h2>
         <div class="formularios">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" />
         </div>
-        
+
         <div class="formularios">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" />
         </div>
-        
+
         <div class="formularios">
-            <label for="edad">Edad:</label>
-            <input type="number" id="edad" min="18">
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" min="18" />
         </div>
-        
+
         <div class="formularios">
-            <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion">
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" />
         </div>
-        
+
         <div class="formularios">
-            <label for="contrasenia">Contraseña:</label>
-            <input type="password" id="contrasenia">
+          <label for="contrasenia">Contraseña:</label>
+          <input type="password" id="contrasenia" />
         </div>
-        
-        <button class="boton1" id="boton" onclick="registrarse()">Registrarse</button>
-    </div>
-    
-    <!--Seccion combo-->
-    <div id="seccionCombo" class="oculto">
-        <h2 class="h2combo">Bienvenido/a <span id="nombreBienvenida"></span>!</h2>
+
+        <button class="boton1" id="boton" onclick="registrarse()">
+          Registrarse
+        </button>
+      </div>
+
+      <!--Seccion combo-->
+      <div id="seccionCombo" class="oculto">
+        <h2 class="h2combo">
+          Bienvenido/a <span id="nombreBienvenida"></span>!
+        </h2>
 
         <h2 class="h2combo">Selecciona un combo:</h2>
         <div class="opcionesCombos">
-            <select id="combos" onchange="mostrarPrecio()">
-                <option value="52500">Combo 1 - $525.00</option>
-                <option value="48500">Combo 2 - $485.00</option>
-                <option value="48900">Combo 3 - $489.00</option>
-            </select>
+          <select id="combos" onchange="mostrarPrecio()">
+            <option value="52500">Combo 1 - $525.00</option>
+            <option value="48500">Combo 2 - $485.00</option>
+            <option value="48900">Combo 3 - $489.00</option>
+          </select>
         </div>
 
         <div class="opcionesCombos">
-            <label for="cantCombos">Cantidad de combos:</label>
-            <input type="number" id="cantCombos" min="1" value="1" onchange="mostrarPrecio()">
+          <label for="cantCombos">Cantidad de combos:</label>
+          <input
+            type="number"
+            id="cantCombos"
+            min="1"
+            value="1"
+            onchange="mostrarPrecio()"
+          />
         </div>
 
         <button onclick="comprarCombo()" class="boton2">Comprar</button>
         <div class="iva" id="costoTotalSinIVA"></div>
         <div class="iva" id="costoIVA"></div>
         <div class="iva" id="costoTotalConIVA">Total (IVA incluido):</div>
+      </div>
     </div>
-
     <script src="./Js/main.js"></script>
-</body>
+  </body>
 </html>

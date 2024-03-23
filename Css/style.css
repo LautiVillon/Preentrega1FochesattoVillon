@@ -24,6 +24,7 @@ header {
 h1{
   color: #7e634e;
 }
+
 h2 {
   color: #7e634e;
   margin-top: 30px;
@@ -96,4 +97,52 @@ button:hover {
 
 div {
   border-radius: 10px;
+}
+
+.formularios {
+  margin-bottom: 20px;
+}
+
+.formularios label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formularios input[type="text"],
+.formularios input[type="password"],
+.formularios input[type="number"] {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#seccionCombo {
+  margin-top: 30px;
+}
+
+.opcionesCombos {
+  margin-bottom: 20px;
+}
+
+.iva {
+  margin-top: 10px;
+  color: #888;
+}
+
+body.login {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.principal {
+  width: 70%;
+  background-color: #c7b69f;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
 }
