@@ -51,16 +51,16 @@ function mostrarCarrito() {
   carrito.forEach((producto, index) => {
       const productoDiv = document.createElement('div');
       productoDiv.innerHTML = `
-    <p>${producto.nombre} - $${producto.precio}</p>
-    <button onclick="agregarProductoAlCarrito(${producto.id})">Agregar al Carrito</button>
-`;
+          <p>${producto.nombre} - $${producto.precio}</p>
+          <button onclick="eliminarProductoDelCarrito(${index})">Eliminar</button>
+      `;
       contenedorCarrito.appendChild(productoDiv);
       total += producto.precio;
   });
 
   // Mostrar el total
   const totalDiv = document.createElement('div');
-  totalDiv.innerHTML = `<p><strong>Total a pagar: $${total}</stron></p>`;
+  totalDiv.innerHTML = `<p><strong>Total a pagar: $${total}</strong></p>`;
   contenedorCarrito.appendChild(totalDiv);
 }
 
