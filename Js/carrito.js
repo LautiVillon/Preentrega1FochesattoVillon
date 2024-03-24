@@ -1,13 +1,20 @@
-// Datos de productos simulados
-const productos = [
-  { id: 1, nombre: 'Pintura lavable', precio: 1500 },
-  { id: 2, nombre: 'Pintura para exterior', precio: 1200 },
-  { id: 3, nombre: 'Pintura para piscinas', precio: 1800 },
-  { id: 4, nombre: 'Pintura interior', precio: 2100 },
-];
+// Declaración de la variable productos de manera global
+let productos = [];
+
+// Función para cargar productos desde el archivo JSON
+function cargarProductos() {
+  fetch("../db/db.json")
+  .then(res => res.json())
+  .then(data => {
+      productos = data.productos; // Almacenar los productos en la variable global
+      mostrarProductos(); // Mostrar los productos después de cargarlos
+  })
+  .catch(error => console.error("Error al cargar los productos:", error));
+}
 
 // Función para inicializar la aplicación
 function inicializar() {
+  cargarProductos();
   mostrarProductos();
   mostrarCarrito();
 }
@@ -44,9 +51,9 @@ function mostrarCarrito() {
   carrito.forEach((producto, index) => {
       const productoDiv = document.createElement('div');
       productoDiv.innerHTML = `
-          <p>${producto.nombre} - $${producto.precio}</p>
-          <button onclick="eliminarProductoDelCarrito(${index})">Eliminar</button>
-      `;
+    <p>${producto.nombre} - $${producto.precio}</p>
+    <button onclick="agregarProductoAlCarrito(${producto.id})">Agregar al Carrito</button>
+`;
       contenedorCarrito.appendChild(productoDiv);
       total += producto.precio;
   });
